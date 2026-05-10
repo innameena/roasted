@@ -1,0 +1,21 @@
+{
+  "name": "Roasted",
+  "short_name": "Roasted",
+  "description": "Vegetable roasting guide",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F6F0",
+  "theme_color": "#4A7A5C",
+  "icons": [
+    {
+      "src": "/images/Roasted-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/Roasted-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
