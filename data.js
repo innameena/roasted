@@ -3,7 +3,7 @@ const vegetables = [
     id: 'asparagus',
     name: 'Asparagus',
     emoji: '🌿',
-    image: 'images/asparagus.png',
+    image: '/images/asparagus.png',
     cuts: [
       { label: 'Thin spears (whole)', temp: 400, timeMin: 10, timeMax: 12, parBoil: null },
       { label: 'Thick spears (whole)', temp: 400, timeMin: 15, timeMax: 18, parBoil: null },
@@ -13,7 +13,7 @@ const vegetables = [
     id: 'beets',
     name: 'Beets',
     emoji: '🔴',
-    image: 'images/beets.png',
+    image: '/images/beets.png',
     cuts: [
       { label: 'Whole, small (under 2")', temp: 400, timeMin: 45, timeMax: 55, parBoil: null },
       { label: 'Whole, large (over 2")', temp: 400, timeMin: 60, timeMax: 75, parBoil: null },
@@ -43,7 +43,7 @@ const vegetables = [
     id: 'brussels-sprouts',
     name: 'Brussels sprouts',
     emoji: '🫛',
-    image: 'images/brussels-sprouts.png',
+    image: '/images/brussels-sprouts.png',
     cuts: [
       { label: 'Whole', temp: 400, timeMin: 25, timeMax: 30, parBoil: null },
       { label: 'Halved', temp: 400, timeMin: 18, timeMax: 22, parBoil: null },
@@ -53,7 +53,7 @@ const vegetables = [
     id: 'butternut-squash',
     name: 'Butternut squash',
     emoji: '🎃',
-    image: 'images/butternut-squash.png',
+    image: '/images/butternut-squash.png',
     cuts: [
       { label: 'Halved, seeded', temp: 400, timeMin: 45, timeMax: 55, parBoil: null },
       { label: '1" cubes', temp: 400, timeMin: 25, timeMax: 30, parBoil: null },
@@ -82,7 +82,7 @@ const vegetables = [
     id: 'cauliflower',
     name: 'Cauliflower',
     emoji: '⬜',
-    image: 'images/cauliflower.png',
+    image: '/images/cauliflower.png',
     cuts: [
       { label: 'Large florets', temp: 425, timeMin: 22, timeMax: 28, parBoil: null },
       { label: 'Small florets (1")', temp: 425, timeMin: 15, timeMax: 18, parBoil: null },
@@ -112,7 +112,7 @@ const vegetables = [
     id: 'green-beans',
     name: 'Green beans',
     emoji: '🌱',
-    image: 'images/green-beans.png',
+    image: '/images/green-beans.png',
     cuts: [
       { label: 'Whole', temp: 425, timeMin: 12, timeMax: 15, parBoil: null },
     ]
@@ -121,7 +121,7 @@ const vegetables = [
     id: 'mushrooms',
     name: 'Mushrooms',
     emoji: '🍄',
-    image: 'images/mushrooms.png',
+    image: '/images/mushrooms.png',
     cuts: [
       { label: 'Whole, small or medium', temp: 400, timeMin: 15, timeMax: 20, parBoil: null },
       { label: 'Halved', temp: 400, timeMin: 12, timeMax: 15, parBoil: null },
@@ -142,7 +142,7 @@ const vegetables = [
     id: 'parsnips',
     name: 'Parsnips',
     emoji: '🌾',
-    image: 'images/parsnips.png',
+    image: '/images/parsnips.png',
     cuts: [
       { label: 'Whole', temp: 400, timeMin: 30, timeMax: 40, parBoil: 'Par-boil 5–7 min before roasting. Large parsnips will burn on the outside before cooking through if roasted from raw.' },
       { label: '1–2" pieces', temp: 400, timeMin: 25, timeMax: 30, parBoil: null },
