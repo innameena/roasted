@@ -1,0 +1,296 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #F8F6F0;
+  --white: #FFFFFF;
+  --text: #1A1A1A;
+  --text-muted: #6B6660;
+  --green: #4A7A5C;
+  --green-light: #EAF2ED;
+  --pumpkin: #C85E25;
+  --pumpkin-light: #FAEDE4;
+  --border: #E2DED6;
+  --radius: 14px;
+  --max-width: 500px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 20px 48px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ── Header ── */
+.app-header {
+  padding: 40px 0 28px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 2.8rem;
+  color: var(--green);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.app-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* ── Vegetable grid ── */
+.veg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.veg-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 16px 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+}
+
+.veg-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 2px 12px rgba(74, 122, 92, 0.12);
+}
+
+.veg-card:active {
+  transform: scale(0.96);
+}
+
+.veg-card:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.veg-emoji {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+img.veg-emoji {
+  width: 3.1rem;
+  height: 3.1rem;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+img.veg-emoji-lg {
+  width: 3.9rem;
+  height: 3.9rem;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.veg-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+/* ── Back button ── */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 14px 22px;
+  margin-top: 28px;
+  min-height: 52px;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.back-btn:hover {
+  background: #3a6349;
+}
+
+.back-btn--pumpkin {
+  background: var(--pumpkin);
+}
+
+.back-btn--pumpkin:hover {
+  background: #a84d1e;
+}
+
+.back-btn:active {
+  transform: scale(0.97);
+}
+
+/* ── Screen header ── */
+.screen-header {
+  margin: 16px 0 24px;
+}
+
+.screen-header .veg-emoji-lg {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.screen-header h2 {
+  font-size: 2rem;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.screen-header .cut-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* ── Cut list ── */
+.cut-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cut-btn {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cut-btn::after {
+  content: '›';
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.cut-btn:hover {
+  border-color: var(--green);
+  background: var(--green-light);
+}
+
+.cut-btn:active {
+  transform: scale(0.98);
+}
+
+.cut-btn:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* ── Result card ── */
+.result-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.result-row {
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+.result-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.result-value {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.result-value.pumpkin { color: var(--pumpkin); }
+.result-value.green   { color: var(--green); }
+
+/* ── Par-boil note ── */
+.parboil-note {
+  background: var(--pumpkin-light);
+  border: 1.5px solid var(--pumpkin);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.parboil-note .note-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.parboil-note p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.parboil-note strong {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* ── Divider ── */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
